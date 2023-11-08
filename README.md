@@ -1,142 +1,129 @@
-# 11 Express.js: Note Taker
 
-## Your Task
+<a name="readme-top" id="readme-top"></a>
 
-Your assignment is to modify starter code to create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+<h1 align="center">
+<img width="256" height="256" src="https://img.icons8.com/wired/256/goodnotes.png" alt="goodnotes"/>
+</h1>
+<h1 align="center">Lightweight Note Taker</h1>
 
-The application’s front end has already been created. It's your job to build the back end, connect the two, and then deploy the entire application to Heroku.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+<details>
+  <summary style="font-size:24px;">Table of Contents</summary>
+  <ol>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#testing">Testing</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#mentions">Acknowledgments</a></li>
+  </ol>
+</details>
+
+#### Keep track of all your thoughts with this lightweight, easy to use, note taking application..
+
+## Getting Started 💡
+<a name="getting-started" id="getting-started"></a>
+
+### Usage
+You have the ability to create a Title and Body for each note you take, and then save the note using the save icon in the top right. Once saved, the note will appear on the left side along with all your other saved notes. Click on a past note to open it back up. Leaving the page will not erase any of your notes, and they will be stored safely.
+
+If you want to run your own local instance, follow the installation instructions included in this document.
 
 
-## User Story
+### Prerequisites 📂
+You will need `node` installed on your computer in order to run this app.
 
+### Installation 📁
+Inside your terminal or command prompt, navigate to the location of the cloned repo. Install the necessary dependencies by running - 
 ```
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
+npm i
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Acceptance Criteria
-
-```
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
-```
+<a name="testing" id="testing"></a>
+## Testing 🔍
+* 
 
 
-## Mock-Up
+## Built With 🌱
+* HTML and CSS
+* [![JavaScript][JavaScript.com]][JavaScript-url] - Programming Language
+* ![node-current](https://img.shields.io/badge/node-blue?style=for-the-badge&logo=Node&logoColor=blue) - javascript runtime
 
-The following images show the web application's appearance and functionality:
+* [![undefined][undefined.com]][undefined-url]undefined
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./Assets/11-express-homework-demo-01.png)
-
-![Note titled “Balance accounts” reads, “Balance account books by end of day Monday,” with other notes listed on the left.](./Assets/11-express-homework-demo-02.png)
-
-
-## Getting Started
-
-On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
-
-The following HTML routes should be created:
-
-* `GET /notes` should return the `notes.html` file.
-
-* `GET *` should return the `index.html` file.
-
-The following API routes should be created:
-
-* `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
-
-* `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
+### NPM Packages
+* [express](https://www.npmjs.com/package/express) - server app 
+* [fs](https://www.npmjs.com/package/fs) - file manipulator 
 
 
-## Bonus
+<a name="contact" id="contact"></a>
+## Questions
+* Contact: [ethansroka@gmail.com](https://ethansroka@gmail.com)
 
-You haven’t learned how to handle DELETE requests, but this application offers that functionality on the front end. As a bonus, try to add the DELETE route to the application using the following guideline:
+## Author 🔑
+* **ethancs13** - [ethancs13](https://github.com/ethancs13)
 
-* `DELETE /api/notes/:id` should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+<a name="contributing" id="contributing"></a>
+## Contributing 📌
 
+Please refer to each project's style and contribution guidelines for submitting patches and additions. Make sure to follow the "fork-and-pull" Git workflow.
 
-## Grading Requirements
+ 1. **Fork** the repo on GitHub
+ 2. **Clone** the project to your own machine
+ 3. **Commit** changes to your own branch
+ 4. **Push** your work back up to your fork
+ 5. Submit a **Pull request** so that we can review your changes
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
-This Challenge is graded based on the following criteria: 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<a name="mentions" id="mentions"></a>
+## Acknowledgments 🙏
+Brian and Erik as always.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Technical Acceptance Criteria: 40%
+<a name="license" id="license"></a>
+## License 🌲
+<details>
+<summary style="font-size:20px;">Full License</summary>
+MIT License
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+Copyright (c) 2023 ethancs13
 
-  * Application front end must connect to an Express.js back end.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-  * Application back end must store notes that have a unique id in a JSON file.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-  * Application must be deployed to Heroku.
-
-
-### Deployment: 36%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-
-### Application Quality: 11%
-
-* Application console is free of errors.
-
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</details>
 
 
-### Bonus: +10 Points
-
-Fulfilling the following can add up to 10 points to your grade. Note that the highest grade you can achieve is still 100:
-
-* Application allows users to delete notes.
 
 
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com
+[JavaScript.com]: https://img.shields.io/badge/JavaScript-blue?style=for-the-badge&logo=Javascript
+[JavaScript-url]: https://www.javascript.com/
+[Bootstrap.com]: https://img.shields.io/badge/bootstrap-blue?style=for-the-badge&logo=Bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com/
+[Tailwind.com]: https://img.shields.io/badge/tailwind-blue?style=for-the-badge&logo=Tailwind&logoColor=blue
+[Tailwind-url]: https://getbootstrap.com/
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
