@@ -7,6 +7,35 @@ const app = express();
 app.use(express.static('public'));
 app.use(express.json());       // to support JSON-encoded bodies
 
+// delete route
+app.delete('/api/notes/:id', (req, res) => {
+  let array = [];
+  
+  fs.readFile('./db/db.json', 'utf8', (err, data) => {
+
+    if (err) {
+      console.log(err)
+    } else {
+      JSON.parse(data).forEach((item) => {
+        let note = {
+          title: item.title,
+          text: item.text,
+          id: Math.floor(Math.random() * 1001)
+        }
+
+        if (item.id != req.params.id) {
+          array.push(note)
+        }
+      })
+
+      fs.writeFile('./db/db.json', JSON.stringify(array), (err) => {
+        err ? console.error(err) : res.send(JSON.stringify(array))
+      })
+    }
+
+
+  })
+})
 
 // This method sends a JSON response with the correct content type.
 app.get('/notes', (req, res) => {
@@ -56,45 +85,13 @@ app.post('/api/notes', (req, res) => {
   })
 })
 
-// delete route
-app.get('/api/notes/:id', (req, res) => {
-  let array = [];
 
-  console.log('got here')
-  
-  fs.readFile('./db/db.json', 'utf8', (err, data) => {
-
-    if (err) {
-      console.log(err)
-    } else {
-      JSON.parse(data).forEach((item) => {
-        let note = {
-          title: item.title,
-          text: item.text,
-          id: Math.floor(Math.random() * 1001)
-        }
-        
-        if (item.id !== req.body.id) {
-          array.push(note)
-        }
-      })
-
-      fs.writeFile('./db/db.json', JSON.stringify(array), (err) => {
-        err ? console.error(err) : console.log('success')
-      })
-    }
-
-
-  })
-})
 
 // We can send a body parameter to the client using the res.send() method. This body parameter can be a string, buffer, or even an array.
 app.get('*', (req, res) => {
   // return
   res.sendFile(__dirname + '/public/index.html')
 });
-
-
 
 app.listen(PORT, () =>
   console.log(`Note taker app listening at http://localhost:${PORT}`)
