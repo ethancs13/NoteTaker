@@ -21,7 +21,7 @@
   </ol>
 </details>
 
-#### Keep track of all your thoughts with this lightweight, easy to use, note taking application..
+#### Keep track of all your thoughts with this lightweight, easy to use, note taking application.
 
 ## Getting Started 💡
 <a name="getting-started" id="getting-started"></a>
@@ -45,7 +45,7 @@ npm i
 
 <a name="testing" id="testing"></a>
 ## Testing 🔍
-* 
+* Currently no tests available
 
 
 ## Built With 🌱
@@ -53,7 +53,6 @@ npm i
 * [![JavaScript][JavaScript.com]][JavaScript-url] - Programming Language
 * ![node-current](https://img.shields.io/badge/node-blue?style=for-the-badge&logo=Node&logoColor=blue) - javascript runtime
 
-* [![undefined][undefined.com]][undefined-url]undefined
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### NPM Packages
