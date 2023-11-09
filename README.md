@@ -31,6 +31,9 @@ You have the ability to create a Title and Body for each note you take, and then
 
 If you want to run your own local instance, follow the installation instructions included in this document.
 
+### Tutorial Video
+[![Watch the video](https://awlights.com/wp-content/uploads/sites/31/2017/05/video-placeholder.png)](/public/assets/noteTaker.mp4)
+
 
 ### Prerequisites 📂
 You will need `node` installed on your computer in order to run this app.
